@@ -2,6 +2,10 @@
 
 Quality audit and hit-rate evaluation toolchain for AI-agent skill libraries. It measures trigger-word quality, detects fragments and collisions, evaluates keyword / TF-IDF routing, tunes similarity thresholds, and provides a routing CLI.
 
+[![CI](https://github.com/lxh113377/skill-hitrate-toolkit/actions/workflows/ci.yml/badge.svg)](https://github.com/lxh113377/skill-hitrate-toolkit/actions)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/lxh113377/skill-hitrate-toolkit?style=social)](https://github.com/lxh113377/skill-hitrate-toolkit)
+
 Measured on the author's real 135-skill library:
 
 | Metric | Keyword | TF-IDF | Gain |

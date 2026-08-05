@@ -2,6 +2,10 @@
 
 Skill 触发词质量审计与命中率评估工具链 —— 给「AI Agent 技能库」（Skill 目录 + 触发词）做量化体检：触发词碎片检测、跨域冲突检测、关键词 / TF-IDF 路由命中率评估、阈值调优与路由 CLI。
 
+[![CI](https://github.com/lxh113377/skill-hitrate-toolkit/actions/workflows/ci.yml/badge.svg)](https://github.com/lxh113377/skill-hitrate-toolkit/actions)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/lxh113377/skill-hitrate-toolkit?style=social)](https://github.com/lxh113377/skill-hitrate-toolkit)
+
 作者在真实技能库（135 skills）上的实测收益：
 
 | 指标 | 纯关键词 | TF-IDF | 提升 |
