@@ -13,6 +13,13 @@ skill_hitrate_audit.py — 全网 skill 命中率安全聚合审计器
 """
 import argparse, contextlib, json, glob, os, re, sys
 
+# Windows 非 UTF-8 区域设置下强制 UTF-8 输出（中文报告）
+if hasattr(sys.stdout, "reconfigure"):
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
+
 # ---- 停用词: 仅纯语法/连接功能词 (不含任何领域动作/对象词) ----
 EN_STOP = set("""the a an and or for with this that from when if else while of to in on at by as is are
 was were be been being it its he she they them we you your our their my i me him her whom which who

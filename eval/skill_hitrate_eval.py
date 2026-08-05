@@ -9,6 +9,12 @@ skill_hitrate_eval.py — Skill 路由效果量化评估
 import argparse, contextlib, json, glob, os, sys, re
 from collections import defaultdict
 
+if hasattr(sys.stdout, "reconfigure"):
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
+
 def load_skills(skills_dir):
     """加载所有 skill 的 name + triggers + domain + desc"""
     skills = []

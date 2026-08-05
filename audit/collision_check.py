@@ -9,6 +9,12 @@ V3: 检测同域内两个不同 skill 共享相同触发词（域内冲突）
 import argparse, contextlib, json, glob, os, sys
 from collections import defaultdict
 
+if hasattr(sys.stdout, "reconfigure"):
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
+
 def load_all(skills_dir):
     trig_map = defaultdict(list)  # trigger → [(skill, domain)]
     for fpath in sorted(glob.glob(os.path.join(skills_dir, "*.json"))):

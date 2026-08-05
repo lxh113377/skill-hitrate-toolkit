@@ -12,6 +12,12 @@ fix_fragments.py — 批量修复触发词碎片
 """
 import argparse, contextlib, json, glob, os, sys
 
+if hasattr(sys.stdout, "reconfigure"):
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
+
 
 def load_fix_map(path):
     if path and os.path.exists(path):

@@ -16,6 +16,12 @@ import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
+if hasattr(sys.stdout, "reconfigure"):
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
+
 def build_text(skill):
     """拼接 skill 文本: name + desc + triggers（用于 TF-IDF）"""
     name = skill.get("name", "")

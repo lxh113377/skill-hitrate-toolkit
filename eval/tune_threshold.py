@@ -6,6 +6,12 @@ import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 from scipy import sparse
 
+if hasattr(sys.stdout, "reconfigure"):
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
+
 
 def load_index(index_dir):
     matrix = sparse.load_npz(os.path.join(index_dir, "tfidf_matrix.npz"))

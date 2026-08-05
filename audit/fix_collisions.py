@@ -10,6 +10,12 @@ fix_collisions.py — 修复高风险跨域触发词
 """
 import argparse, contextlib, json, glob, os, sys
 
+if hasattr(sys.stdout, "reconfigure"):
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
+
 
 def load_fix_map(path):
     if path and os.path.exists(path):

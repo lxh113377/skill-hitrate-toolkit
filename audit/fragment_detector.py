@@ -6,6 +6,12 @@
 """
 import argparse, contextlib, json, re, glob, os, sys
 
+if hasattr(sys.stdout, "reconfigure"):
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
+
 def is_suspicious_fragment(trig, skill_name):
     reasons = []
     t = trig.strip()
