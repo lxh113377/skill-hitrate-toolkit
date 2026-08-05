@@ -1,0 +1,13 @@
+{
+  "user_favorites": {
+    "xlsx": 0.9,
+    "pdf": 0.8,
+    "github": 0.7
+  },
+  "context_skill_map": {
+    "报表": ["xlsx", "chart"],
+    "部署": ["web-deploy"],
+    "语音": ["asr"],
+    "图片": ["imagegen"]
+  }
+}

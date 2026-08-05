@@ -1,0 +1,32 @@
+[
+  {
+    "tier": "easy",
+    "description": "明确关键词 + 唯一答案",
+    "queries": [
+      {"query": "帮我把 PDF 合并一下", "expected_skill": "pdf", "domain": "doc"},
+      {"query": "帮我生成图片", "expected_skill": "imagegen", "domain": "media"},
+      {"query": "GitHub 创建 PR", "expected_skill": "github", "domain": "web"},
+      {"query": "Excel 数据分析", "expected_skill": "xlsx", "domain": "data"},
+      {"query": "安装 skill", "expected_skill": "skill-install", "domain": "system"}
+    ]
+  },
+  {
+    "tier": "medium",
+    "description": "口语化 / 复合意图",
+    "queries": [
+      {"query": "截取视频帧做封面", "expected_skill": "video-frames", "domain": "media"},
+      {"query": "帮我画图表看趋势", "expected_skill": "chart", "domain": "data"},
+      {"query": "帮我写 Word 报告", "expected_skill": "docx", "domain": "doc"},
+      {"query": "网站部署上线", "expected_skill": "web-deploy", "domain": "web"},
+      {"query": "语音转文字", "expected_skill": "asr", "domain": "system"}
+    ]
+  },
+  {
+    "tier": "negative",
+    "description": "不应触发任何 skill",
+    "queries": [
+      {"query": "今天天气怎么样", "expected_skill": null, "domain": null},
+      {"query": "帮我点个外卖", "expected_skill": null, "domain": null}
+    ]
+  }
+]

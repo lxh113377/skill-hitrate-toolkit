@@ -1,0 +1,16 @@
+{
+  "skills": [
+    {
+      "name": "skill-install",
+      "domain": "system",
+      "desc": "安装、注册技能",
+      "triggers": ["安装 skill", "技能安装"]
+    },
+    {
+      "name": "asr",
+      "domain": "system",
+      "desc": "语音转文字、音频转写",
+      "triggers": ["语音转文字", "音频转写", "ASR"]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "skills": [
+    {
+      "name": "pdf",
+      "domain": "doc",
+      "desc": "PDF 读取、合并、表单填写",
+      "triggers": ["PDF 合并", "表单填写", "PDF转Word"]
+    },
+    {
+      "name": "docx",
+      "domain": "doc",
+      "desc": "Word 文档生成与排版",
+      "triggers": ["Word 文档", "写 Word 报告", "生成报告"]
+    }
+  ]
+}

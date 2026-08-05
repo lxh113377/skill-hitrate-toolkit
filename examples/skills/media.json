@@ -1,0 +1,16 @@
+{
+  "skills": [
+    {
+      "name": "video-frames",
+      "domain": "media",
+      "desc": "从视频提取帧或片段",
+      "triggers": ["截取视频帧", "视频封面", "抽帧"]
+    },
+    {
+      "name": "imagegen",
+      "domain": "media",
+      "desc": "文生图、图片生成",
+      "triggers": ["生成图片", "文生图", "画图"]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Unit tests
+        run: python -m pytest tests/ -q
+      - name: Workflow smoke (build -> eval -> audit)
+        run: |
+          python eval/build_skill_vectors.py --skills-dir examples/skills --output output
+          python eval/skill_hitrate_eval_v2.py --skills-dir examples/skills --index-dir output
+          python audit/skill_hitrate_audit.py --skills-dir examples/skills

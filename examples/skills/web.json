@@ -1,0 +1,16 @@
+{
+  "skills": [
+    {
+      "name": "github",
+      "domain": "web",
+      "desc": "GitHub 操作：PR、issue、CI 运行查看",
+      "triggers": ["GitHub 创建 PR", "合并 PR", "提 issue", "gh 命令"]
+    },
+    {
+      "name": "web-deploy",
+      "domain": "web",
+      "desc": "前端网站部署上线",
+      "triggers": ["部署上线", "发布网站", "上线", "的"]
+    }
+  ]
+}
